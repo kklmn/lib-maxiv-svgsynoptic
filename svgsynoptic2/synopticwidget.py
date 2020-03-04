@@ -45,9 +45,9 @@ class SynopticWidget(QtGui.QWidget):
     def __init__(self, url=None, parent=None, *args, **kwargs):
         super(SynopticWidget, self).__init__(parent)
         self.subscribe.connect(self._handle_subscriptions)
+        self._modelNames = None
         self._url = url
         self._setup_ui(url)
-        self._modelNames = None
 
     def _setup_ui(self, url=None, section=None):
         self.hbox = hbox = QtGui.QHBoxLayout(self)
